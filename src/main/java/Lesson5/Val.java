@@ -19,7 +19,4 @@ public class Val {
         return data;
     }
 
-//    public int getDataI(int i, int j) {
-//        return this.data[i][j];
-//    }
 }

@@ -44,7 +44,7 @@ public class ValuesList {
 
     public static void main(String args[]) throws IOException {
         String[] header = {"Val1", "Val2", "Val3"};
-        int[][] data = {{500, 700, 300}, {700, 100, 100}, {800, 100, 200},{111, 1111, 111} };
+        int[][] data = {{500, 700, 300}, {700, 100, 100}, {800, 100, 200}, {111, 1111, 111}};
         Val vallist = new Val(header, data);
         writeFile(vallist);
 
