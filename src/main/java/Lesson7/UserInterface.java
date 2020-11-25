@@ -14,7 +14,7 @@ public class UserInterface {
 
             setGlobalCity(city);
 
-            System.out.println("Введите ответ: 1 - погода на 12 часов." +  "2 - погода на 5 дней." + "Exit - выти.");
+            System.out.println("Введите ответ: 1 - погода на 12 часов." + "2 - погода на 5 дней." + "Exit - выти.");
             String result = scanner.nextLine();
 
             IsExit(result);
@@ -40,23 +40,23 @@ public class UserInterface {
         }
     }
 
-    private void setGlobalCity(String city){
+    private void setGlobalCity(String city) {
         ApplicationGlobalState.getInstance().setSelectedCity(city);
     }
 
     private void validateUserInput(String userInput) throws IOException {
-if (userInput == null || userInput.length() != 1){
-    throw new IOException("Неверрный ввод,ожидается один символ!");
-}
-int answer = 0;
-try {
-    answer = Integer.parseInt(userInput);
-}catch (NumberFormatException e){
-    throw  new IOException("Неверный ввод,введены буквы!");
-}
+        if (userInput == null || userInput.length() != 1) {
+            throw new IOException("Неверрный ввод,ожидается один символ!");
+        }
+        int answer = 0;
+        try {
+            answer = Integer.parseInt(userInput);
+        } catch (NumberFormatException e) {
+            throw new IOException("Неверный ввод,введены буквы!");
+        }
     }
 
-    private void notifyController (String input ) throws IOException{
+    private void notifyController(String input) throws IOException {
         controller.onUserInput(input);
     }
 
