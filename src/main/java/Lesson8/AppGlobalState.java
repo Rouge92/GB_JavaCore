@@ -1,15 +1,15 @@
-package Lesson7;
+package Lesson8;
 
-public  final class ApplicationGlobalState {
-    private static ApplicationGlobalState INSDTANCE;
+public  final class AppGlobalState {
+    private static AppGlobalState INSDTANCE;
     private static final String API_KEY = "GsvXrNaxMpldrOrntrfKZWEQCLCoGxMq";
     private String selectedCity = null;
 
-    private ApplicationGlobalState(){
+    private AppGlobalState(){
     }
-   public static ApplicationGlobalState getInstance(){
+   public static AppGlobalState getInstance(){
         if (INSDTANCE == null){
-            INSDTANCE = new ApplicationGlobalState();
+            INSDTANCE = new AppGlobalState();
         }
         return INSDTANCE;
    }
